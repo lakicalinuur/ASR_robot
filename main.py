@@ -10,7 +10,7 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, Update
 import speech_recognition as sr
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "7920977306:AAHhFpv2ImMsiowjpm288ebRdxAjoJZwWec")
-WEBHOOK_URL_BASE = os.environ.get("WEBHOOK_URL_BASE", "")
+WEBHOOK_URL_BASE = os.environ.get("WEBHOOK_URL_BASE", "https://asr-robot-1.onrender.com")
 PORT = int(os.environ.get("PORT", "8080"))
 WEBHOOK_PATH = os.environ.get("WEBHOOK_PATH", "/webhook/")
 WEBHOOK_URL = WEBHOOK_URL_BASE.rstrip('/') + WEBHOOK_PATH if WEBHOOK_URL_BASE else ""
