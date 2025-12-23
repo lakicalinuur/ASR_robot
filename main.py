@@ -24,20 +24,7 @@ DOWNLOADS_DIR = os.environ.get("DOWNLOADS_DIR", "./downloads")
 os.makedirs(DOWNLOADS_DIR, exist_ok=True)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-LANGS = [
-("🇬🇧 English","en-US"), ("🇸🇦 العربية","ar-SA"), ("🇪🇸 Español","es-ES"), ("🇫🇷 Français","fr-FR"),
-("🇷🇺 Русский","ru-RU"), ("🇩🇪 Deutsch","de-DE"), ("🇮🇳 हिन्दी","hi-IN"), ("🇮🇷 فارسی","fa-IR"),
-("🇮🇩 Indonesia","id-ID"), ("🇺🇦 Українська","uk-UA"), ("🇦🇿 Azərbaycan","az-AZ"), ("🇮🇹 Italiano","it-IT"),
-("🇹🇷 Türkçe","tr-TR"), ("🇧🇬 Български","bg-BG"), ("🇷🇸 Srpski","sr-RS"), ("🇵🇰 اردو","ur-PK"),
-("🇹🇭 ไทย","th-TH"), ("🇻🇳 Tiếng Việt","vi-VN"), ("🇯🇵 日本語","ja-JP"), ("🇰🇷 한국어","ko-KR"),
-("🇨🇳 中文","zh-CN"), ("🇳🇱 Nederlands","nl-NL"), ("🇸🇪 Svenska","sv-SE"), ("🇳🇴 Norsk","no-NO"),
-("🇮🇱 עברית","he-IL"), ("🇩🇰 Dansk","da-DK"), ("🇪🇹 አማርኛ","am-ET"), ("🇫🇮 Suomi","fi-FI"),
-("🇧🇩 বাংলা","bn-BD"), ("🇰🇪 Kiswahili","sw-KE"), ("🇳🇵 नेपाली","ne-NP"),
-("🇵🇱 Polski","pl-PL"), ("🇬🇷 Ελληνικά","el-GR"), ("🇨🇿 Čeština","cs-CZ"), ("🇮🇸 Íslenska","is-IS"),
-("🇱🇹 Lietuvių","lt-LT"), ("🇱🇻 Latviešu","lv-LV"), ("🇭🇷 Hrvatski","hr-HR"),
-("🇭🇺 Magyar","hu-HU"), ("🇷🇴 Română","ro-RO"), ("🇸🇴 Somali","so-SO"), ("🇲🇾 Melayu","ms-MY"),
-("🇺🇿 O'zbekcha","uz-UZ"), ("🇵🇭 Tagalog","tl-PH"), ("🇵🇹 Português","pt-PT")
-]
+
 
 user_mode = {}
 user_transcriptions = {}
