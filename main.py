@@ -29,7 +29,7 @@ GEMINI_KEYS = os.environ.get("GEMINI_KEYS", GEMINI_KEY)
 GEMINI_MODEL = "gemini-2.5-flash"
 
 MAX_WORKERS = 10
-CHUNK_SECONDS = 25
+CHUNK_SECONDS = 30
 
 os.makedirs(DOWNLOADS_DIR, exist_ok=True)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
