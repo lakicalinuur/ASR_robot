@@ -457,7 +457,7 @@ def handle_media(message):
 
 def send_long_text(chat_id, text, reply_id, uid, action="Transcript"):
     mode = get_user_mode(uid)
-    footer = "\n\n🚀 Better Quality & Best accuracy ? Use: @MediaToTextBot"
+    footer = "\n\nOpen this file and copy the text inside 👍"
     if len(text) > MAX_MESSAGE_CHUNK:
         if mode == "Split messages":
             sent = None
