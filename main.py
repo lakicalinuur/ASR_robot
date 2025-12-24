@@ -325,7 +325,7 @@ def process_chunk(chunk_index, start, chunk_duration, original_file, language):
     try:
         cmd = [
             'ffmpeg', '-y', '-ss', str(start), '-t', str(chunk_duration),
-            '-i', original_file, '-vn', '-ar', '48000', '-ac', '1', temp_chunk_file
+            '-i', original_file, '-vn', '-ar', '16000', '-ac', '1', temp_chunk_file
         ]
         subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         if os.path.exists(temp_chunk_file) and os.path.getsize(temp_chunk_file) > 100:
