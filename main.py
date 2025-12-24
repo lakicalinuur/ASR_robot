@@ -28,7 +28,7 @@ GEMINI_KEY = os.environ.get("GEMINI_KEY", "")
 GEMINI_KEYS = os.environ.get("GEMINI_KEYS", GEMINI_KEY)
 GEMINI_MODEL = "gemini-2.5-flash"
 
-MAX_WORKERS = 5
+MAX_WORKERS = 3
 CHUNK_SECONDS = 300
 
 os.makedirs(DOWNLOADS_DIR, exist_ok=True)
