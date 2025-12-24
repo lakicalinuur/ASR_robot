@@ -129,7 +129,7 @@ def execute_gemini_action(action_callback):
 
 def ask_gemini(text, instruction):
     if not gemini_rotator.keys:
-        raise RuntimeError("GEMINI_KEY(s) not configured")
+        raise RuntimeError("GEMINI_KEY not configured")
     def perform(key):
         payload = {"contents": [{"parts": [{"text": f"{instruction}\n\n{text}"}]}]}
         data = gemini_api_call(f"models/{GEMINI_MODEL}:generateContent", payload, key)
@@ -143,7 +143,7 @@ def build_action_keyboard(text_len):
     btns = []
     if text_len > 1000:
         btns.append([InlineKeyboardButton("Get Summarize", callback_data="summarize_menu|")])
-    btns.append([InlineKeyboardButton("🚀 TRY NEW BOT (2GB)", url="https://t.me/MediaToTextBot")])
+    btns.append([InlineKeyboardButton("🚀 TRY NEW BOT", url="https://t.me/MediaToTextBot")])
     return InlineKeyboardMarkup(btns)
 
 def build_lang_keyboard(origin):
@@ -431,7 +431,7 @@ def handle_media(message):
 
 def send_long_text(chat_id, text, reply_id, uid, action="Transcript"):
     mode = get_user_mode(uid)
-    footer = "\n\n🚀 Better Quality & 2GB Files? Use: @MediaToTextBot"
+    footer = "\n\n🚀 Better Quality & 2GB File uploads ? Use: @MediaToTextBot"
     if len(text) > MAX_MESSAGE_CHUNK:
         if mode == "Split messages":
             sent = None
@@ -445,7 +445,7 @@ def send_long_text(chat_id, text, reply_id, uid, action="Transcript"):
             fname = os.path.join(DOWNLOADS_DIR, f"{action}.txt")
             with open(fname, "w", encoding="utf-8") as f:
                 f.write(text + footer)
-            sent = bot.send_document(chat_id, open(fname, 'rb'), caption="✅ Done! For 2GB files & AI quality use @MediaToTextBot", reply_to_message_id=reply_id)
+            sent = bot.send_document(chat_id, open(fname, 'rb'), caption="✅ Done! For best accuracy & high quality use @MediaToTextBot", reply_to_message_id=reply_id)
             os.remove(fname)
             return sent
     return bot.send_message(chat_id, text + footer, reply_to_message_id=reply_id)
