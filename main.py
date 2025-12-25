@@ -334,7 +334,7 @@ def process_chunk(chunk_index, start, chunk_duration, original_file, language):
             'ffmpeg', '-y', '-i', original_file,
             '-filter_complex',
             f"[0:a]atrim=start={start}:duration={chunk_duration},asetpts=PTS-START/TB[a0];anullsrc=channel_layout=mono:sample_rate=12000,atrim=duration={SILENCE_SECONDS}[s];[s][a0]concat=n=2:v=0:a=1[out]",
-            '-map', '[out]', '-ar', '12000', '-ac', '1', temp_chunk_file
+            '-map', '[out]', '-ar', '8000', '-ac', '1', temp_chunk_file
         ]
         subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         if os.path.exists(temp_chunk_file) and os.path.getsize(temp_chunk_file) > 100:
