@@ -28,10 +28,10 @@ GEMINI_KEYS = os.environ.get("GEMINI_KEYS", GEMINI_KEY)
 GEMINI_MODEL = "gemini-2.5-flash"
 ADMIN_ID = 6964068910
 
-MAX_WORKERS = 4
-CHUNK_SECONDS = 60
-CHUNK_OVERLAP = 2
-SILENCE_PADDING = 0.5
+MAX_WORKERS = 3
+CHUNK_SECONDS = 300
+CHUNK_OVERLAP = 1
+SILENCE_PADDING = 5
 
 os.makedirs(DOWNLOADS_DIR, exist_ok=True)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
