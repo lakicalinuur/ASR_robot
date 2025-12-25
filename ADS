@@ -49,7 +49,49 @@ LANGS = [
 ("🇺🇿 O'zbekcha","uz"), ("🇵🇭 Tagalog","tl"), ("🇵🇹 Português","pt")
 ]
 
-ADS_TEXT = """"""
+ADS_TEXT = """Just send me a file less than 20MB 😎 or use @MediaToTextBot
+━━━━━━━━━━━━━━━━━━
+
+❌ Stop using @Media_transcriber_Bot
+✅ Switch to the new and improved AI bot:
+👉 @MediaToTextBot
+
+━━━━━━━━━━━━━━━━━━
+
+🔥 Why @MediaToTextBot is 100% Better?
+
+━━━━━━━━━━━━━━━━━━
+
+✅ Huge File Support
+No more 20MB limit. Upload files up to 2GB.
+
+━━━━━━━━━━━━━━━━━━
+
+✅ Auto-Language Detection
+No language selection needed.
+Spanish, English, Arabic — even mixed in one file.
+
+━━━━━━━━━━━━━━━━━━
+
+✅ Perfect Formatting
+Clean text with proper punctuation and structure.
+Easy to read. No mess.
+
+━━━━━━━━━━━━━━━━━━
+
+✅ Clean & Accurate Transcripts
+Removes “um”, “uh”, and background noise.
+Fixes mistakes the old bot couldn’t.
+
+━━━━━━━━━━━━━━━━━━
+
+✅ No More Cutting
+Full transcript from start to finish.
+No missing words.
+
+━━━━━━━━━━━━━━━━━━
+🚀 Switch now for a better experience
+👉 @MediaToTextBot"""
 
 user_mode = {}
 user_transcriptions = {}
