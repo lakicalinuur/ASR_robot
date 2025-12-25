@@ -59,7 +59,7 @@ bot = telebot.TeleBot(BOT_TOKEN, threaded=True)
 flask_app = Flask(__name__)
 
 def get_user_mode(uid):
-    return user_mode.get(uid, "📄 Text File")
+    return user_mode.get(uid, "💬 Split messages")
 
 def gemini_api_call(endpoint, payload, key):
     url = f"https://generativelanguage.googleapis.com/v1beta/{endpoint}?key={key}"
@@ -169,7 +169,7 @@ def send_welcome(message):
             "• audio file\n"
             "• video\n"
             "• to transcribe for free\n\n"
-            "This bot is not good. For the best quality, use @MediaToTextBot:"
+            "This bot is not good. For the best quality, use @MediaToTextBot"
         )
         kb = build_lang_keyboard("file")
         bot.reply_to(message, welcome_text, reply_markup=kb, parse_mode="Markdown")
