@@ -343,7 +343,7 @@ def process_chunk(chunk_index, start, chunk_duration, original_file, language):
             '-f', 'lavfi', '-i', f'anullsrc=channel_layout=mono:sample_rate=16000',
             '-filter_complex', f'[1:a]atrim=end={SILENCE_PADDING}[sil];[sil][0:a]concat=n=2:v=0:a=1[out]',
             '-map', '[out]',
-            '-ar', '12000', '-ac', '1', 
+            '-ar', '16000', '-ac', '1', 
             temp_chunk_file
         ]
         
