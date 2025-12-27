@@ -157,7 +157,7 @@ def transcribe_with_gemini(file_path, mime_type, language=None):
     with open(file_path, "rb") as f:
         file_data = f.read()
     b64_data = base64.b64encode(file_data).decode("utf-8")
-    prompt = "Transcribe the audio in this file verbatim Provide a clean text that does not look like raw STT. Return ONLY the transcription text, no preamble or extra commentary."
+    prompt = "Transcribe the audio in this file Provide a clean text that does not look like raw STT. Return ONLY the transcription text, no preamble or extra commentary."
     if language:
         prompt += f" The language is {language}."
     def perform(key, model):
