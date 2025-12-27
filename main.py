@@ -291,7 +291,7 @@ def lang_cb(call):
                 except:
                     pass
     except Exception:
-        bot.send_message(chat_id, "Use @MediaToTextBot okey 😵")
+        bot.send_message(chat_id, "Use @MediaToTextBot 👍")
     finally:
         try:
             if file_path and os.path.exists(file_path):
