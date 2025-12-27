@@ -23,7 +23,7 @@ REQUIRED_CHANNEL = os.environ.get("REQUIRED_CHANNEL", "")
 DOWNLOADS_DIR = os.environ.get("DOWNLOADS_DIR", "./downloads")
 GEMINI_KEY = os.environ.get("GEMINI_KEY", "")
 GEMINI_KEYS = os.environ.get("GEMINI_KEYS", GEMINI_KEY)
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-2.5-flash"
 ADMIN_ID = 6964068910
 
 os.makedirs(DOWNLOADS_DIR, exist_ok=True)
