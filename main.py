@@ -167,7 +167,7 @@ def send_welcome(message):
             "• audio file\n"
             "• video\n"
             "• to transcribe for free\n\n"
-            "This bot is not good. For best quality, use @MediaToTextBot"
+            "This bot is not good. For best quality, use @MediaToTextBot for any problem report https://t.me/osiy3"
         )
         kb = build_lang_keyboard("file")
         bot.reply_to(message, welcome_text, reply_markup=kb, parse_mode="Markdown")
