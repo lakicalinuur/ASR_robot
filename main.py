@@ -168,7 +168,7 @@ def ask_gemini(text, instruction):
 
 def build_action_keyboard(text_len):
     btns = []
-    if text_len > 1000:
+    if text_len > 3000:
         btns.append([InlineKeyboardButton("Get Summarize", callback_data="summarize_menu|")])
     return InlineKeyboardMarkup(btns)
 
@@ -214,7 +214,7 @@ def send_welcome(message):
             "• audio file\n"
             "• video\n"
             "• to transcribe for free\n\n"
-            "Select the language spoken in your audio or video:"
+            "This bot is not good. For best quality, use @MediaToTextBot for any problem report https://t.me/osiy3"
         )
         kb = build_lang_keyboard("file")
         bot.reply_to(message, welcome_text, reply_markup=kb, parse_mode="Markdown")
