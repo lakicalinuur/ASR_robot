@@ -2,4 +2,4 @@ pyTelegramBotAPI
 requests
 Flask
 SpeechRecognition
-
+faster_whisper
